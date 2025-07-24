@@ -1,0 +1,30 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+data = {
+    'Student': ['A', 'B', 'C', 'D', 'E', 'F', 'G'],
+    'Study Hours': [1, 2, 3, 4, 5, 6, 7],
+    'Sleep Hours': [8, 7, 6, 2, 3, 4, 1],
+    'Score': [45, 50, 55, 70, 60, 80, 85]
+}
+
+df = pd.DataFrame(data)
+print(df)
+
+plt.figure(figsize=(8, 5))
+plt.plot(df['Study Hours'], df['Score'], marker='o', color='blue', label='Study Hours')
+plt.title('Study Hours vs Score')
+plt.xlabel('Study Hours')
+plt.ylabel('Score')
+plt.grid(True)
+plt.legend()
+plt.show()
+
+plt.figure(figsize=(8, 5))
+plt.plot(df['Sleep Hours'], df['Score'], marker='o', color='green', label='Sleep Hours')
+plt.title('Sleep Hours vs Score')
+plt.xlabel('Sleep Hours')
+plt.ylabel('Score')
+plt.grid(True)
+plt.legend()
+plt.show()
